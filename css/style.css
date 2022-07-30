@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(59, 55, 83);
+}
+
+.game-board{
+    width: 800px;
+    height:600px;
+    border: 1px solid black;
+    margin: 0 auto;
+    margin-top: 50px;
+    position: relative;
+    overflow: hidden;
+    background-image:url(/images/newbg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family:;
+}
+.score{
+    position: absolute;
+}
+.tails{
+    position: absolute;
+    bottom:0;  
+    margin-bottom: 45px;
+    margin-left: 15%;
+    width: 82px;
+}
+
+.pipe{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 45px;
+    width: 80px;
+    animation: pipe-animation 1.5s infinite linear;
+}
+
+.clouds{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    animation: cloud-animation 20s infinite linear;
+}
+
+.jump{
+    animation: jump-animation 650ms ease-in;
+}
+
+.death{
+    animation: death-animation 800ms ease-in-out;
+}
+
+.grass{
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+}
+
+
+@keyframes pipe-animation{
+    from{
+        right:-80px;
+    }
+
+    to{
+        right:100%;
+    }
+}
+
+@keyframes cloud-animation{
+    from{
+        right:-100%;
+    }
+
+    to{
+        right:100%;
+    }
+}
+
+@keyframes jump-animation {
+    0%{
+        bottom: 0;
+    }
+
+    40%{
+        bottom: 150px;
+    }
+
+    50%{
+        bottom: 150px;
+    }
+
+    60%{
+        bottom: 150px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+
+@keyframes death-animation {
+    25%{
+        bottom: 20%;
+    }
+    100%{
+        bottom: -100%;
+    }
+}
